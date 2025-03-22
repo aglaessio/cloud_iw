@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cloud iw</title>
+    <title>Gestão de Atendimentos - Empresa Familiar</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,20 +14,9 @@
     </div>
     <div id="content" class="container" style="display: none;">
         <h1>Arquivos de Atendimento</h1>
-        <p>Pasta: <a href="https://1drv.ms/f/c/22F35A3CAB041989/EgxhnTuZeTZPk5aSleYjxIcBc1QJDMiXuCton3RYAVYgYg?e=JKvbKL" target="_blank">OneDrive</a></p>
-        <button onclick="showEditScreen()">Editar Arquivos</button>
+        <p>Arquivos carregados automaticamente do OneDrive</p>
         <ul id="file-list"></ul>
         <button onclick="logout()">Sair</button>
-    </div>
-    <div id="edit-screen" class="container" style="display: none;">
-        <h2>Editar Arquivos</h2>
-        <div class="form">
-            <input type="text" id="file-name" placeholder="Nome do arquivo (ex.: Atendimento_ClienteA.pdf)">
-            <input type="text" id="file-url" placeholder="Link do OneDrive">
-            <button onclick="addFile()">Adicionar</button>
-        </div>
-        <ul id="edit-file-list"></ul>
-        <button onclick="saveAndReturn()">Salvar e Voltar</button>
     </div>
     <script src="script.js"></script>
 </body>
