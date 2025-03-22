@@ -1,6 +1,6 @@
 const repoOwner = "aglaessio"; // Substitua se for outro usuário
 const repoName = "cloud_iw"; // Substitua se for outro repositório
-const token = "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"; // Nunca exponha um token real
+const token = "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"; // Nunca exponha um token real
 const apiUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/contents`;
 const fileList = document.getElementById("file-list");
 const searchInput = document.getElementById("search");
