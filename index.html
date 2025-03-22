@@ -3,32 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestão de Atendimentos - Empresa Familiar</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Cloud IW - Arquivos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background: #fff;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        a {
+            text-decoration: none;
+            color: #007bff;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <div id="login" class="login-container">
-        <h2>Acesso Restrito</h2>
-        <input type="password" id="password" placeholder="Digite a senha">
-        <button onclick="checkPassword()">Entrar</button>
-    </div>
-    <div id="content" class="container" style="display: none;">
-        <h1>Arquivos de Atendimento</h1>
-        <p>Pasta: <a href="https://1drv.ms/f/c/22F35A3CAB041989/EgxhnTuZeTZPk5aSleYjxIcBc1QJDMiXuCton3RYAVYgYg?e=JKvbKL" target="_blank">OneDrive</a></p>
-        <button onclick="showEditScreen()">Editar Arquivos</button>
-        <ul id="file-list"></ul>
-        <button onclick="logout()">Sair</button>
-    </div>
-    <div id="edit-screen" class="container" style="display: none;">
-        <h2>Editar Arquivos</h2>
-        <div class="form">
-            <input type="text" id="file-name" placeholder="Nome do arquivo (ex.: Atendimento_ClienteA.pdf)">
-            <input type="text" id="file-url" placeholder="Link do OneDrive">
-            <button onclick="addFile()">Adicionar</button>
-        </div>
-        <ul id="edit-file-list"></ul>
-        <button onclick="saveAndReturn()">Salvar e Voltar</button>
-    </div>
-    <script src="script.js"></script>
+    <h1>Arquivos do Cloud IW</h1>
+    <ul id="file-list"></ul>
+
+    <script>
+        // Lista de arquivos (atualize conforme o conteúdo do repositório)
+        const files = [
+            { name: "README.md", path: "README.md" },
+            { name: "exemplo.txt", path: "exemplo.txt" },
+            // Adicione mais arquivos conforme necessário
+        ];
+
+        const baseUrl = "https://github.com/aglaessio/cloud_iw/raw/main/";
+        const fileList = document.getElementById("file-list");
+
+        files.forEach(file => {
+            const li = document.createElement("li");
+            const a = document.createElement("a");
+            a.href = baseUrl + file.path;
+            a.textContent = file.name;
+            a.target = "_blank"; // Abre em nova aba
+            li.appendChild(a);
+            fileList.appendChild(li);
+        });
+    </script>
 </body>
 </html>
