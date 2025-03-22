@@ -3,61 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cloud IW - Arquivos</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f4f4f4;
-        }
-        h1 {
-            text-align: center;
-            color: #333;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            background: #fff;
-            margin: 5px 0;
-            padding: 10px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        a {
-            text-decoration: none;
-            color: #007bff;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <title>Cloud IW - Gerenciador de Arquivos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <h1>Arquivos do Cloud IW</h1>
-    <ul id="file-list"></ul>
+    <header>
+        <h1><i class="fas fa-cloud"></i> Cloud IW</h1>
+        <p>Gerencie seus arquivos gratuitamente</p>
+    </header>
 
-    <script>
-        // Lista de arquivos (atualize conforme o conteúdo do repositório)
-        const files = [
-            { name: "01 - AgroPlay Ingressos - Arena T Cascavel - Ana Castela", path: "01 - AgroPlay Ingressos - Arena T Cascavel - Ana Castela" },
-            { name: "exemplo.txt", path: "exemplo.txt" },
-            // Adicione mais arquivos conforme necessário
-        ];
+    <main>
+        <section class="file-container">
+            <h2>Arquivos e Pastas</h2>
+            <div class="controls">
+                <input type="file" id="file-upload" multiple accept=".xls,.xlm,.xlsx,.pdf,.doc,.jpg,.jpeg">
+                <button onclick="uploadFiles()">Upload</button>
+                <input type="text" id="search" placeholder="Pesquisar arquivos...">
+            </div>
+            <ul id="file-list"></ul>
+        </section>
+    </main>
 
-        const baseUrl = "https://github.com/aglaessio/cloud_iw/raw/main/";
-        const fileList = document.getElementById("file-list");
+    <footer>
+        <p>© 2025 Cloud IW. Feito com <i class="fas fa-heart"></i> por xAI.</p>
+    </footer>
 
-        files.forEach(file => {
-            const li = document.createElement("li");
-            const a = document.createElement("a");
-            a.href = baseUrl + file.path;
-            a.textContent = file.name;
-            a.target = "_blank"; // Abre em nova aba
-            li.appendChild(a);
-            fileList.appendChild(li);
-        });
-    </script>
+    <script src="scripts.js"></script>
 </body>
 </html>
