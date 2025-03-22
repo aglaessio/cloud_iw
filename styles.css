@@ -18,20 +18,19 @@ body {
     width: 100%;
 }
 
-.login-container h2, .container h2 {
+.login-container h2, .container h1 {
     text-align: center;
     color: #333;
     margin-bottom: 20px;
 }
 
-.login-container input, .form input {
+.login-container input {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 16px;
-    box-sizing: border-box;
 }
 
 button {
@@ -43,22 +42,10 @@ button {
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
-    margin-top: 10px;
 }
 
 button:hover {
     background-color: #005bb5;
-}
-
-.container h1 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.container p {
-    text-align: center;
-    margin-bottom: 20px;
 }
 
 ul {
@@ -71,14 +58,6 @@ li {
     margin: 8px 0;
     background: #f9f9f9;
     border-radius: 5px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: background 0.3s;
-}
-
-li:hover {
-    background: #e9ecef;
 }
 
 li a {
@@ -91,16 +70,7 @@ li a:hover {
     text-decoration: underline;
 }
 
-li button {
-    width: auto;
-    padding: 5px 10px;
-    background-color: #d9534f;
-}
-
-li button:hover {
-    background-color: #c9302c;
-}
-
-.form {
-    margin-bottom: 20px;
+.folder {
+    font-style: italic;
+    color: #555;
 }
